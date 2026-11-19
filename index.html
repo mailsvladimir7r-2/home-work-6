@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Навчальні картки: Box Model та позиціювання</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="container">
+    <h1>Демонстрація Box Model та позиціювання</h1>
+
+    <!-- Картка 1: з позиційованою позначкою -->
+    <article class="card card-featured">
+      <span class="badge">Нове</span>
+      <h2>Основи CSS Box Model</h2>
+      <p>
+        У цій картці застосовано великий верхній внутрішній відступ (padding-top), 
+        щоб зарезервувати місце для позначки «Нове». Навіть на вузькому екрані 
+        позначка не перекриває заголовок.
+      </p>
+    </article>
+
+    <!-- Картка 2: інші розміри відступів, рамки та контроль переповнення -->
+    <article class="card card-compact">
+      <h2>Робота з рамками та переповненням</h2>
+      <p>
+        Ця картка має товщу рамку (border), менші внутрішні відступи та більший 
+        зовнішній відступ (margin). Властивість overflow-wrap гарантує, що 
+        довгі слова або посилання, наприклад 
+        https://mozilla.org, 
+        не вийдуть за межі блоку.
+      </p>
+    </article>
+  </main>
+
+</body>
+</html>

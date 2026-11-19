@@ -1,0 +1,77 @@
+/* 1. Глобальний ресет для передбачуваного розрахунку розмірів */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0 16px; /* Захищає картки від прилипання до країв екрана на мобільних */
+  font-family: system-ui, -apple-system, sans-serif;
+  line-height: 1.5;
+  background-color: #f4f6f8;
+  color: #1e293b;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+h1 {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+/* Спільна геометрія та обмеження ширини для карток */
+.card {
+  width: 100%;
+  max-width: 480px;
+  margin: 24px auto;
+  background-color: #ffffff;
+  border-radius: 8px;
+  overflow: hidden; /* Запобігає виходу контенту за межі заокруглених кутів */
+  overflow-wrap: break-word; /* Переносить надто довгі слова без горизонтального скролу */
+}
+
+/* Картка 1: контекст позиціювання + місце зверху під позначку */
+.card-featured {
+  position: relative;
+  /* Верхній відступ 48px резервує простір під позначку, щоб вона не налізала на h2 */
+  padding: 48px 24px 24px 24px;
+  border: 2px solid #2563eb;
+}
+
+/* Позиційована позначка всередині першої картки */
+.badge {
+  position: absolute;
+  inset-block-start: 14px; /* Логічний аналог top: 14px */
+  inset-inline-end: 14px;  /* Логічний аналог right: 14px */
+  background-color: #2563eb;
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+
+/* Картка 2: інша комбінація padding, border та margin */
+.card-compact {
+  padding: 16px 20px;
+  border: 5px dashed #0d9488;
+  margin: 40px auto; /* Більший вертикальний відступ, ніж у першої картки */
+}
+
+.card h2 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 1.25rem;
+}
+
+.card p {
+  margin: 0;
+}
